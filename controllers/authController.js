@@ -2,6 +2,7 @@ import userModel from "../models/userModel.js";
 
 export const userSignup = async (req, res) => {
   try {
+    console.log(999, req.body)
     const { email, password, firstName, lastName, mobileNo } = req.body;
 
     const totalCount = await userModel.countDocuments({ role: "user" });
